@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+    android:layout_height="match_parent"
+    android:background="#F6FDFF"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/greeting_with_user_name"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/sub_greeting"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile_picture"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dummy_avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SearchView
+            android:id="@+id/SearchView"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/round_corner"
+            android:iconifiedByDefault="false"
+
+            android:queryBackground="@android:color/transparent"
+            android:queryHint="Search Class, Assignment etc.,"
+            android:theme="@style/AppSearchView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/round_corner"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:padding="0dp"
+            android:text="@string/user_class_dummy"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:translationX="-90dp"
+            app:backgroundTint="@color/orange_high"
+            app:icon="@drawable/ic_baseline_arrow_right_24"
+            app:iconGravity="textEnd"
+            app:layout_constraintStart_toEndOf="@+id/SearchView"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            tools:ignore="TextContrastCheck" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/alert_class_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SearchView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_upcoming_class_type"
+                    android:layout_width="65dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/round_corner"
+                    android:backgroundTint="@color/Mid_blue"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="center"
+                    android:text="@string/class_type_dummy"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_alert_class_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/alert_class_time_dummy"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_upcoming_class_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/alert_class_title_dummy_string"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_upcoming_class_type" />
+
+                <TextView
+                    android:id="@+id/tv_alert_class_lecturer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/alert_class_lecturer_dummy_string"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_upcoming_class_title" />
+
+                <View
+                    android:id="@+id/separator"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_alert_class_lecturer" />
+
+                <TextView
+                    android:id="@+id/tv_alert_class_participant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/alert_class_participant_dummy_string"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/round_corner"
+                    android:gravity="center"
+                    android:paddingHorizontal="30dp"
+                    android:text="@string/join_class_string"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:backgroundTint="@color/orange_high"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_alert_class_participant"
+                    app:layout_constraintTop_toBottomOf="@+id/separator"
+                    tools:ignore="TextContrastCheck" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/upcoming_class_string"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/alert_class_container" />
+
+        <TextView
+            android:id="@+id/iv_viewAll_upcomingclass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/view_all_string"
+            android:textColor="#00796B"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/alert_class_container" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:scrollbars="none"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_viewAll_upcomingclass">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/upcomming_class1"
+                    layout="@layout/item_row_upcomming_class"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"/>
+
+                <include
+                    android:id="@+id/upcomming_class2"
+                    layout="@layout/item_row_upcomming_class"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp" />
+
+                <include
+                    android:id="@+id/upcomming_class3"
+                    layout="@layout/item_row_upcomming_class"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp" />
+
+                <include
+                    android:id="@+id/upcomming_class4"
+                    layout="@layout/item_row_upcomming_class"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp" />
+
+                <include
+                    android:id="@+id/upcomming_class5"
+                    layout="@layout/item_row_upcomming_class"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp" />
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/iv_title_class_assignment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/assignment_string"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView" />
+
+        <TextView
+            android:id="@+id/iv_viewAll_class_assignment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/view_all_string"
+            android:textColor="#00796B"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_title_class_assignment">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/assignment_class1"
+                    layout="@layout/item_row_class_assignment"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp" />
+
+                <include
+                    android:id="@+id/upcomming_class2"
+                    layout="@layout/item_row_class_assignment"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp" />
+
+                <include
+                    android:id="@+id/upcomming_class3"
+                    layout="@layout/item_row_class_assignment"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp" />
+
+                <include
+                    android:id="@+id/upcomming_class4"
+                    layout="@layout/item_row_class_assignment"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp" />
+
+                <include
+                    android:id="@+id/upcomming_class5"
+                    layout="@layout/item_row_class_assignment"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp" />
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

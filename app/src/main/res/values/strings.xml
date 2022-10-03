@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Tugas 5 PSI</string>
+    <string name="greeting_with_user_name">Hi, Martin</string>
+    <string name="sub_greeting">Are you ready for today\'s class?</string>
+    <string name="user_class_dummy">Class B</string>
+    <string name="class_type_dummy">Math</string>
+    <string name="alert_class_time_dummy">In 10::00 Min</string>
+    <string name="alert_class_title_dummy_string">square and Square Roots</string>
+    <string name="alert_class_lecturer_dummy_string">By : Mr. Sarman Joshi</string>
+    <string name="alert_class_participant_dummy_string">20+ Member Joined</string>
+    <string name="join_class_string">Join Class</string>
+    <string name="upcoming_class_string">Upcoming Class</string>
+    <string name="view_all_string">View All</string>
+    <string name="assignment_string">Assignment</string>
+</resources>
