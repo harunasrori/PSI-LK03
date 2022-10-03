@@ -4,7 +4,9 @@
     android:layout_width="180dp"
     android:padding="16dp"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="8dp">
+    app:cardCornerRadius="8dp"
+    android:outlineAmbientShadowColor="@color/white"
+    android:outlineSpotShadowColor="@color/white">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

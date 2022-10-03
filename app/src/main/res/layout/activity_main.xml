@@ -55,7 +55,6 @@
             android:layout_marginTop="24dp"
             android:background="@drawable/round_corner"
             android:iconifiedByDefault="false"
-
             android:queryBackground="@android:color/transparent"
             android:queryHint="Search Class, Assignment etc.,"
             android:theme="@style/AppSearchView"
@@ -228,7 +227,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingBottom="8dp">
 
                 <include
                     android:id="@+id/upcomming_class1"
@@ -307,7 +307,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingBottom="8dp">
 
                 <include
                     android:id="@+id/assignment_class1"
